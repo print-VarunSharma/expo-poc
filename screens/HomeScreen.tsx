@@ -3,21 +3,21 @@ import { StyleSheet } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import {Center, Image, Heading } from 'native-base'
+import {Center, Image, Heading, VStack } from 'native-base'
 
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Discover</Text>
+      <Heading color="white" size="3xl">Welcome to PartyTown</Heading>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Center>
       <Image source={{
       uri: "https://i.ytimg.com/vi/WKuaujIHBT4/maxresdefault.jpg"
     }}  alt="ultra" size="2xl" />
     </Center>
+    <Text style={styles.title}>Find your next party</Text>
 
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );
 }

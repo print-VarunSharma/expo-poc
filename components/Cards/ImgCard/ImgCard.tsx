@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 300,
   },
   content: {
     padding: 10,
@@ -33,19 +33,23 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-
-const ImgMediaCard = () => {
+interface ImgMediaCardProps {
+    imgUrl: string;
+    title: string
+    text: string
+  }
+    
+const ImgMediaCard: React.FC<ImgMediaCardProps> = ({imgUrl, title, text}): JSX.Element => {
   return (
     <View style={styles.card}>
       <Image
-        source={{ uri: 'https://edmidentity.com/wp-content/uploads/2019/02/HSMF2018_0804_215631-5140_IME.jpg' }}
+        source={{ uri: imgUrl }}
         style={styles.media}
       />
       <View style={styles.content}>
-        <Text style={styles.title}>Lizard</Text>
+        <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        {text}
         </Text>
       </View>
       <View style={styles.actions}>

@@ -3,12 +3,20 @@ import { StyleSheet } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import {Center, Image} from 'native-base'
+
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>Ultra Music Festival</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <Center>
+      <Image source={{
+      uri: "https://i.ytimg.com/vi/WKuaujIHBT4/maxresdefault.jpg"
+    }}  size="2xl" />
+    </Center>
+
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );

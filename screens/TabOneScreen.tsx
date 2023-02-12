@@ -13,11 +13,11 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Center>
       <Image source={{
-      uri: "https://i.ytimg.com/vi/WKuaujIHBT4/maxresdefault.jpg"
+      uri: "https://images.dailyhive.com/20170925132703/Screen-Shot-2017-09-25-at-1.26.22-PM.png"
     }}  alt="ultra" size="2xl" />
     </Center>
+    <Text style={styles.title}>Find the artist you love</Text>
 
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );
 }

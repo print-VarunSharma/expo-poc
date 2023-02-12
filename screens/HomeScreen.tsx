@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import {Center, Image, Heading, VStack } from 'native-base'
@@ -16,7 +15,10 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
       uri: "https://i.ytimg.com/vi/WKuaujIHBT4/maxresdefault.jpg"
     }}  alt="ultra" size="2xl" />
     </Center>
-    <Text style={styles.title}>Find your next party</Text>
+    <Text style={styles.title}>Get personalized concert recommendations</Text>
+    <Text style={styles.title}>and stay connected with</Text>
+    <Text style={styles.title}>your favorite artists🎉</Text> 
+
 
     </View>
   );

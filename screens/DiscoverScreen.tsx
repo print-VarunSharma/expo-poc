@@ -43,7 +43,7 @@ const imageData = [
 
   
 ]
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function DiscoverScreen({ navigation }: RootTabScreenProps<'Discover'>) {
     const [showModal, setShowModal] = useState(false);
 
   return (

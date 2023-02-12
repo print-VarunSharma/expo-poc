@@ -1,28 +1,17 @@
-import { StyleSheet } from 'react-native';
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
 import { VStack, Box, Divider } from 'native-base';
+import { StyleSheet } from 'react-native';
+
+import { Text, View } from '../components/Themed';
+import ImgCard from '../components/Cards/ImgCard/ImgCard'
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
       <Box borderRadius="md">
-      <VStack space="4" divider={<Divider />}>
-        <Box px="4" pt="4">
-          NativeBase
-        </Box>
-        <Box px="4">
-          NativeBase is a free and open source framework that enable developers
-          to build high-quality mobile apps using React Native iOS and Android
-          apps with a fusion of ES6.
-        </Box>
-        <Box px="4" pb="4">
-          GeekyAnts
-        </Box>
-      </VStack>
+        <ImgCard />
+   
     </Box>
     </View>
   );
@@ -42,5 +31,24 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  content: {
+    width: '100%',
+    height: '100%',
+    padding: 70,
+    paddingTop: 100,
+  },
+  marker: {
+    color: 'white',
+    position: 'absolute',
+    top: 0,
+    left: 140,
+    fontFamily: 'monospace',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    alignSelf: 'center',
   },
 });
